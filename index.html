@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -18,86 +17,153 @@
 </head>
 <body>
 
-	<div class="row">
-		<div class="large-12 columns">
-			<h2>Welcome to Foundation</h2>
-			<p>This is version 4.0.5.</p>
-			<hr />
-		</div>
-	</div>
+	<header>
+		<div class="row">
+			<div class="large-2 columns" id="logo">
+				<img src="images/supreme-auto-supplies-reconditioned-turbos-logo.png" />
+			</div>
+			<div class="large-2 columns">
+				<img id="turbo" src="images/reconditioned-turbocharger.png" />
+			</div>
+			<div class="large-8 columns">
+				<nav>
 
-	<div class="row">
+				</nav>
+				<div class="row">
+					<div class="large-12 columns">
+						<h2>0800 121 1234<h2>
+						<h2><span>FREE NEXT DAY DELIVERY</span></h2>
+					</div>
+				</div>
+				<div class="row" id="sub-nav">
+					<div class="large-12 columns">
+						<!--ul class="inline-list">
+							<li><a href="">Twitter</a></li>
+							<li><a href="">Ebay</a></li>
+							<li><a href="">Facebook</a></li>
+						</ul-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</header>
+	
+
+	<div class="row" id="content">
 		<div class="large-8 columns">
-			<h3>The Grid</h3>
+			<h1>Contact page</h1>
 
 			<!-- Grid Example -->
 			<div class="row">
 				<div class="large-12 columns">
-					<div class="panel">
-						<p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-					</div>
+					[[$cp-form]]
+
+					<form id="cp-contact_form" name=`cp-form` action="[[~[[*id]]]]" method="post" class="sas-forms">
+						<h2>CONTACT US</h2>
+					    <input type="hidden" name="nospam:blank" value="" />
+					    <div class="row">
+					        <div class="large-12 columns">
+					        	<label>
+					        	<span class="error">[[!+fi.error.text]]</span>
+					      		</label>
+					      		<textarea name="text" id="text" value="[[!+fi.text]]" placeholder="Your message">[[!+fi.text]]</textarea>
+					        </div>
+					    </div>
+					    <div class="row">
+					    	<div class="large-8 columns">
+					        	<label>
+					            <span class="error">[[!+fi.error.email]]</span>
+					          	</label>
+					          	<input type="text" name="email" id="email" value="[[!+fi.error.email]]" placeholder="Your email addy" />
+					        	<label>
+					            <span class="error">[[!+fi.error.subject]]</span>
+					          	</label>
+					          	<input type="text" name="subject" id="subject" value="[[!+fi.subject]]" placeholder="Your phone number" />
+					          	<br />
+					        </div>
+					        <div class="large-4 columns">
+					       		<input type="submit" name="cp-submit" value="SEND" class="huge-button" />
+					        </div>
+					    </div>
+					</form>
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-6 columns">
-					<div class="panel">
-						<p>Six columns</p>
-					</div>
+				<hr />
+				<div class="large-6 columns" id="opening-hours">
+					
+					<table>
+					    <h3>OPENING HOURS</h3>
+					  <tbody>
+					    <tr>
+					      <td>Monday - Thursday</td>
+					      <td>08:00 AM - 05:00 PM</td>
+					    </tr>
+					    <tr>
+					      <td>Friday</td>
+					      <td>08:00 AM - 04:00 PM</td>
+					    </tr>
+					    <tr>
+					    	<td>Saturday</td>
+					     	<td>08:00 AM - 12:00 AM</td>
+					    </tr>
+					    <tr>
+					      <td>Sunday</td>
+					      <td>Closed</td>
+					    </tr>
+					  </tbody>
+					</table>
 				</div>
 				<div class="large-6 columns">
-					<div class="panel">
-						<p>Six columns</p>
-					</div>
+					<h3>Contact details</h3>
+					<ul class="vcard">
+					  <li class="fn"></li>
+					  <li class="street-address"></li>
+					  <li class="locality"></li>
+					  <li><span class="state"></span><span class="zip"></span></li>
+					  <li class="email"><a href="#"></a></li>
+					  <li class="phone"><span>Phone: </span>01201 246 1223</li>
+					</ul>
 				</div>
 			</div>
-			<div class="row">
-				<div class="large-4 columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
+			<!--div class="row">
+				<hr />
+				<div class="large-6 columns">
+					<p>Six columns</p>
 				</div>
-				<div class="large-4 columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
+				<div class="large-6 columns">
+					<p>Six columns</p>
 				</div>
-				<div class="large-4 columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-			</div>
-
-			<h3>Buttons</h3>
-
-      <div class="row">
-        <div class="large-6 columns">
-          <p><a href="#" class="small button">Small Button</a></p>
-          <p><a href="#" class="button">Medium Button</a></p>
-          <p><a href="#" class="large button">Large Button</a></p>
-        </div>
-        <div class="large-6 columns">
-          <p><a href="#" class="small alert button">Small Alert Button</a></p>
-          <p><a href="#" class="success button">Medium Success Button</a></p>
-          <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
-        </div>
-      </div>
+			</div-->
+			
 		</div>
 
-		<div class="large-4 columns">
-			<h4>Getting Started</h4>
-			<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+			
 
-			<h4>Other Resources</h4>
-			<p>Once you've exhausted the fun in this document, you should check out:</p>
-			<ul class="disc">
-				<li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
-				<li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
-				<li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
-			</ul>
+		<div class="large-4 columns" id="sidebar">
+			<div class="sidebar-box">
+				<h2>BRAND NEW WEBSITE</h2>
+				<p>
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+					Coming soon, Coming soon
+
+				</p>
+			</div>
 		</div>
 	</div>
+	<footer>
 
+	</footer>
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +

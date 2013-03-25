@@ -1,0 +1,132 @@
+/* COLOUR setup yellow/brown-black/cream */
+
+$accent-colour: #fde700; 
+$head-colour: #211a14; 
+$main-colour: #f4f1ec; 
+
+$colour-shadows: rgba(14, 32, 59, .5);
+
+
+/* FILE PATH VARIABLES */
+$images-path: "../images/"; /* SITE spec */
+$font-path: "../../templates/stylesheets/";
+
+/* other */
+$pad: 30px;
+
+/* fonts */
+
+@font-face{ 
+            font-family: "BAUHS93";
+            src: url('http://fontsforweb.com/public/fonts/2802/BAUHS93.eot');
+            src: local("Bauhaus 93"), url('http://fontsforweb.com/public/fonts/2802/BAUHS93.woff') format("woff"), url('http://fontsforweb.com/public/fonts/2802/BAUHS93.ttf') format("truetype");
+        }
+
+/* COMMON STYLES */
+
+body {background: $main-colour !important;}
+
+header {
+	background: $head-colour url('#{$images-path}header-bkg-texture.png') repeat-x top center;
+	margin-bottom: 30px;
+		#logo {
+			margin-bottom: 15px;
+		}
+		img {
+			margin-top: 15px;
+
+		}
+		img#turbo {
+				margin-top: 45px;
+				margin-bottom: -45px;
+		}
+
+		h2 {
+		text-align: right;
+		color: $main-colour;
+		line-height: 1em;
+		margin-bottom: 0em;
+		span {
+			color: $accent-colour;
+		}
+	}
+}
+footer {
+	background: $head-colour url('#{$images-path}footer-bkg-texture.png') repeat-x bottom center; 
+	height:160px;
+}
+
+
+nav {height:60px;}
+hr {border: 1px dashed #d6d4cf !important; margin: 0 $pad/2 !important;}
+
+#sidebar {margin-top: $pad;}
+form {
+	padding: 0px $pad 0px $pad !important;
+	h2 {
+		padding-top: 0.5em;
+		margin-bottom: 0em;
+	}
+	textarea {
+		height: 100px;
+	}
+	textarea, input {
+		border: 0px!important;
+		-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	}
+	.huge-button {
+		font-size: 18px;
+		background: $head-colour;
+		border:0px;
+		width:100%;
+		color: $accent-colour;
+		padding: 40px 0px;
+		position: relative;
+		bottom: -21px;
+		right: -30px;
+	}
+}
+form, .sidebar-box {background: $accent-colour;}
+.sidebar-box {padding: 15px; margin: 0 0 30px 0; width: 100%;}
+
+#opening-hours table {
+	background: $main-colour;
+	border:0;
+	tr {
+		background: $main-colour;
+		border:0;
+		td {
+			padding:0.1em 0.5em 0.1em 0.1em;
+			background: $main-colour;
+			border:0;
+		}
+	}
+}
+.cta-button {
+		-moz-box-shadow: 4px 4px 0px 0px #211a14;
+		-webkit-box-shadow: 4px 4px 0px 0px #211a14;
+		box-shadow: 4px 4px 0px 0px #211a14;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fde800), color-stop(1, #fde800));
+		background: -moz-linear-gradient(center top, #fde800 5%, #fde800 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fde800', endColorstr='#fde800');
+		background-color: #fde800;
+		display: inline-block;
+		color: #211a14;
+		font-family: Trebuchet MS;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 10px 24px;
+		text-decoration: none;
+		text-shadow: 1px 1px 0px #ded17c;
+		&:hover {
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fde800), color-stop(1, #fde800));
+			background: -moz-linear-gradient(center top, #fde800 5%, #fde800 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fde800', endColorstr='#fde800');
+			background-color: #fde800;
+		}
+		&:active {
+			position: relative;
+			top: 1px;
+		}
+	}

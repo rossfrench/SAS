@@ -12,12 +12,12 @@
 //
 
 // This is the default html and body font-size for the base em value.
-// $em-base: 16px;
+$em-base: 14px;
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: #211a14;
+$body-font-family: "Open Sans", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -50,8 +50,8 @@
 // Grid Variables
 //
 
-// $row-width: 62.5em;
-// $column-gutter: 1.875em;
+$row-width: 84.28em;
+$column-gutter: 2.14em;
 // $total-columns: 12;
 
 //
@@ -70,21 +70,21 @@
 //
 
 // We use these to control header font styles
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $header-font-weight: bold;
+$header-font-family: "BAUHS93";
+$header-font-weight: 500;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: #211a14;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: emCalc(44px);
-// $h2-font-size: emCalc(37px);
-// $h3-font-size: emCalc(27px);
-// $h4-font-size: emCalc(23px);
-// $h5-font-size: emCalc(18px);
+$h1-font-size: emCalc(50px);
+$h2-font-size: emCalc(30px);
+$h3-font-size: emCalc(20px);
+$h4-font-size: emCalc(18px);
+$h5-font-size: emCalc(16px);
 // $h6-font-size: 1em;
 
 // These control how subheaders are styled.
@@ -192,7 +192,7 @@
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
+$fieldset-border-width: 0px;
 // $fieldset-border-color: #ddd;
 // $fieldset-padding: emCalc(20px);
 // $fieldset-margin: emCalc(18px) 0;
