@@ -142,6 +142,7 @@ footer {
 
 nav {
 	padding:0;
+	margin-bottom: 1em;
 	.section-container {
 		margin-bottom: 1em;
 	}
@@ -164,16 +165,18 @@ nav {
 		}
 	}
 	@media only screen and (min-width: 48em) {
-			.section-container.tabs section .title, .section-container.tabs .section .title {
+			.section-container.auto section .title, .section-container.auto .section .title {
 			border: 0px solid #ccc;
+			background-color: transparent;
+			color: $main-colour;
 		}
-		.section-container.tabs section.active .title, .section-container.tabs .section.active .title, .section-container section .title, .section-container .section .title {
+		.section-container.auto section.active .title, .section-container.auto .section.active .title, .section-container section .title, .section-container .section .title {
 			background-color: transparent;
 		}
-		.section-container.tabs section:last-child .title, .section-container.tabs .section:last-child .title {
+		.section-container.auto section:last-child .title, .section-container.auto .section:last-child .title {
 			border-right: 0px solid #ccc;
 		}
-		.section-container.tabs section .content, .section-container.tabs .section .content {
+		.section-container.auto section .content, .section-container.auto .section .content {
 			border: 0px solid #ccc;
 		}
 		section p.title a:before {
@@ -184,10 +187,23 @@ nav {
 			color: $accent-colour;
 		}
 	}
-	.section-container section .title a, .section-container .section .title a {
+	.section-container section .title a, .section-container .section .title a, 
+	.section-container.auto section .title a, .section-container.auto .section .title a {	
 		color: $main-colour;
 		font-size: 1.2em;
 		padding: 0em 0em 5px 1.4em;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+	.section-container section .title:hover, .section-container .section .title:hover,
+	.section-container.auto section .title:hover, .section-container.auto .section .title:hover {
+		background-color: transparent;
+	}
+	.section-container section .content, .section-container .section .content, .section-container.auto section .content, 
+	.section-container.auto .section .content {
+		background-color: transparent;
+		padding: 0;
 	}
 	.section-container section.active .title a, .section-container .section.active .title a {
 		color: $accent-colour;
@@ -204,9 +220,22 @@ nav {
 	section a:hover {
 		color: $accent-colour !important;
 	}
+	/*mob*/
+	.section-container section .title, .section-container .section .title, .section-container.auto section .title, .section-container.auto .section .title {
+		background-color: transparent;
+	}
+	.section-container section.active .title, .section-container .section.active .title, .section-container.auto section.active .title, .section-container.auto .section.active .title {
+		background: transparent;
+	}
 }
 
 #content {
+	#brands-stocked {
+		li {
+			text-align: center;
+			padding-top: 10px;
+		}
+	}
 	.orbit-container {
 		border: 10px solid #fff;
 	}
