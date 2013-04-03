@@ -19,29 +19,68 @@
 
 	<header>
 		<div class="row">
-			<div class="large-2 columns" id="logo">
+			<div class="large-2 small-6 columns text-center" id="logo">
 				<img src="images/supreme-auto-supplies-reconditioned-turbos-logo.png" />
 			</div>
-			<div class="large-2 columns">
+			<div class="large-2 columns hide-for-small">
 				<img id="turbo" src="images/reconditioned-turbocharger.png" />
 			</div>
-			<div class="large-8 columns">
-				<nav>
-
-				</nav>
+			<div class="large-8 small-6 columns">
+					<nav>
+						<div class="section-container tabs" data-section="tabs">
+						  <section class="section">
+						    <p class="title"><a href="#">TURBO SERVICES</a></p>
+						    <div class="content">
+						      	<ul class="inline-list">
+								  <li><a href="#">INJECTORS</a></li>
+								  <li><a href="#">INJECTORS</a></li>
+								  <li><a href="#">INJECTORS</a></li>
+								  <li><a href="#">INJECTORS</a></li>
+								</ul>
+						    </div>
+						  </section>
+						  <section class="section">
+						    <p class="title"><a href="#">TURBO SERVICES</a></p>
+						    <div class="content">
+						      	<ul class="inline-list">
+								  <li><a href="#">INJECTORS2</a></li>
+								  <li><a href="#">INJECTORS2</a></li>
+								  <li><a href="#">INJECTORS2</a></li>
+								  <li><a href="#">INJECTORS2</a></li>
+								</ul>
+						    </div>
+						  </section>
+						  <section class="section">
+						    <p class="title"><a href="#">TURBO SERVICES</a></p>
+						    <div class="content">
+						      	<ul class="inline-list">
+								  <li><a href="#">INJECTORS1</a></li>
+								  <li><a href="#">INJECTORS1</a></li>
+								  <li><a href="#">INJECTORS1</a></li>
+								  <li><a href="#">INJECTORS1</a></li>
+								</ul>
+						    </div>
+						  </section>
+						  <section class="section">
+						    <p class="title"><a href="#">TURBO SERVICES</a></p>
+						  </section>
+						  
+						 
+						</div>
+					</nav>
 				<div class="row">
 					<div class="large-12 columns">
-						<h2>0800 121 1234<h2>
+						<h2>0121 246 1223</h2>
 						<h2><span>FREE NEXT DAY DELIVERY</span></h2>
 					</div>
 				</div>
 				<div class="row" id="sub-nav">
 					<div class="large-12 columns">
-						<!--ul class="inline-list">
+						<ul class="inline-list">
 							<li><a href="">Twitter</a></li>
 							<li><a href="">Ebay</a></li>
-							<li><a href="">Facebook</a></li>
-						</ul-->
+							<li class="last"><a href="">Facebook</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -53,10 +92,35 @@
 	<div class="row" id="content">
 		<div class="large-8 columns">
 			<h1>Contact page</h1>
-
-			<!-- Grid Example -->
 			<div class="row">
 				<div class="large-12 columns">
+					<ul data-orbit data-options="timer_speed:2500; bullets:false;">
+					  <li>
+					    <img src="images/slides/injectors-ORBIT-SLIDER-IMG-1.jpg" />
+					    <div class="orbit-caption">slide1</div>
+					  </li>
+					   <li>
+					    <img src="images/slides/injectors-ORBIT-SLIDER-IMG-1.jpg" />
+					    <div class="orbit-caption">slide2</div>
+					  </li>
+					   <li>
+					    <img src="images/slides/injectors-ORBIT-SLIDER-IMG-1.jpg" />
+					    <div class="orbit-caption">slide2</div>
+					  </li>
+					  <li>
+					    <img src="images/slides/injectors-ORBIT-SLIDER-IMG-1.jpg" />
+					    <div class="orbit-caption">slide1</div>
+					  </li>
+					   <li>
+					    <img src="images/slides/injectors-ORBIT-SLIDER-IMG-1.jpg" />
+					    <div class="orbit-caption">slide2</div>
+					  </li>
+					   <li>
+					    <img src="images/slides/injectors-ORBIT-SLIDER-IMG-1.jpg" />
+					    <div class="orbit-caption">slide2</div>
+					  </li>
+					  
+					</ul>
 					[[$cp-form]]
 
 					<form id="cp-contact_form" name=`cp-form` action="[[~[[*id]]]]" method="post" class="sas-forms">
@@ -94,7 +158,7 @@
 				<div class="large-6 columns" id="opening-hours">
 					
 					<table>
-					    <h3>OPENING HOURS</h3>
+					    <h2>OPENING HOURS</h2>
 					  <tbody>
 					    <tr>
 					      <td>Monday - Thursday</td>
@@ -116,15 +180,16 @@
 					</table>
 				</div>
 				<div class="large-6 columns">
-					<h3>Contact details</h3>
+					<h2>Contact details</h2>
 					<ul class="vcard">
 					  <li class="fn"></li>
 					  <li class="street-address"></li>
 					  <li class="locality"></li>
 					  <li><span class="state"></span><span class="zip"></span></li>
 					  <li class="email"><a href="#"></a></li>
-					  <li class="phone"><span>Phone: </span>01201 246 1223</li>
+					  <li class="phone"><span>Phone: </span>0121 246 1223</li>
 					</ul>
+					<a class="cta-button">button</a>
 				</div>
 			</div>
 			<!--div class="row">
@@ -159,11 +224,88 @@
 
 				</p>
 			</div>
+			<form id="cp-contact_form" name=`cp-form` action="[[~[[*id]]]]" method="post" class="sas-forms">
+				<h2>CONTACT US</h2>
+			    <input type="hidden" name="nospam:blank" value="" />
+			    <div class="row">
+			        <div class="large-12 columns">
+			        	<label>
+			        	<span class="error">[[!+fi.error.text]]</span>
+			      		</label>
+			      		<textarea name="text" id="text" value="[[!+fi.text]]" placeholder="Your message">[[!+fi.text]]</textarea>
+			        </div>
+			    </div>
+			    <div class="row">
+			    	<div class="large-8 columns">
+			        	<label>
+			            <span class="error">[[!+fi.error.email]]</span>
+			          	</label>
+			          	<input type="text" name="email" id="email" value="[[!+fi.error.email]]" placeholder="Your email addy" />
+			        	<label>
+			            <span class="error">[[!+fi.error.subject]]</span>
+			          	</label>
+			          	<input type="text" name="subject" id="subject" value="[[!+fi.subject]]" placeholder="Your phone number" />
+			          	<br />
+			        </div>
+			        <div class="large-4 columns">
+			       		<input type="submit" name="cp-submit" value="SEND" class="huge-button" />
+			        </div>
+			    </div>
+			</form>
 		</div>
 	</div>
 	<footer>
-
+		<div class="row">
+			<div class="large-2 columns" id="footer-logo">
+				<img src="images/supreme-auto-supplies-reconditioned-turbos-logo.png" />
+			</div>
+			<div class="large-2 columns" id="">
+				<h3>LINKS OUT</h3>
+				<ul class="no-bullet">
+					<li><a href="#">A LINK</a></li>
+					<li><a href="#">ONE MORE</a></li>
+					<li><a href="#">MORE LINKS</a></li>
+					<li><a href="#">LINKS</a></li>
+				</ul>
+			</div>
+			<div class="large-2 columns" id="">
+				<h3>LINKS OUT</h3>
+				<ul class="no-bullet">
+					<li><a href="#">A LINK</a></li>
+					<li><a href="#">ONE MORE</a></li>
+					<li><a href="#">MORE LINKS</a></li>
+					<li><a href="#">LINKS</a></li>
+				</ul>
+			</div>
+			<div class="large-2 columns" id="">
+				<h3>LINKS OUT</h3>
+				<ul class="no-bullet">
+					<li><a href="#">A LINK</a></li>
+					<li><a href="#">ONE MORE</a></li>
+					<li><a href="#">MORE LINKS</a></li>
+					<li><a href="#">LINKS</a></li>
+				</ul>
+			</div>
+			<div class="large-4 columns">
+			  	<div id="order-info">
+					<h2>0121 246 1223<h2>
+					<h2><span>FREE NEXT DAY DELIVERY</span></h2>
+				</div>
+			</div>
+		</div>
 	</footer>
+	<div class="row"  id="concretecloud">
+		<div class="large-6 columns large-centered">
+			<p class="text-center">
+				<a href="http://concretecloud.co.uk" target="_blank">website designed, developed, hosted and leased by Concrete Cloud Ltd ©2013</a>
+			</p>
+			
+			<a href="http://concretecloud.co.uk" target="_blank">
+				<img src="images/concretecloud.png" />
+			</a>
+		</div>
+	</div>
+	
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
