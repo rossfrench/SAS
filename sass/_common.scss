@@ -27,6 +27,7 @@ $pad: 30px;
 
 /* COMMON STYLES */
 
+
 body {
 	background: $main-colour !important;
 	border-top: 2px solid $head-colour;
@@ -230,6 +231,12 @@ nav {
 }
 
 #content {
+	h2 {
+		color: $accent-colour;
+		
+	}
+	a { color: $accent-colour;
+		}
 	#brands-stocked {
 		li {
 			text-align: center;
@@ -294,6 +301,43 @@ nav {
 		font-size: 14px;
 		color: #fff;
 	}
+	/* Pagination */
+.pageList {
+  display: block;
+  height: 1.5em;
+  margin-left: -0.3125em; }
+  .pageList li {
+    display: block;
+    float: left;
+    height: 1.5em;
+    color: #222222;
+    font-size: 0.875em;
+    margin-left: 0.3125em; }
+    .pageList li a {
+      display: block;
+      padding: 0.0625em 0.4375em 0.0625em;
+      color: #999999; }
+    .pageList li:hover a,
+    .pageList li a:focus {
+      background: #e6e6e6; }
+    .pageList li.unavailable a {
+      cursor: default;
+      color: #999999; }
+    .pageList li.unavailable:hover a, .pageList li.unavailable a:focus {
+      background: transparent; }
+    .pageList li a.active {
+      background: $head-colour;
+      color: white;
+      font-weight: bold;
+      cursor: default; }
+      .pageList li a.active:hover, .pageList li a.active:focus {
+        background: #2ba6cb; }
+
+.paging {
+  text-align: center; }
+  .paging ul > li {
+    float: none;
+    display: inline-block; }
 }
 hr {border: 1px dashed #d6d4cf !important; margin: 0 $pad/2 !important;}
 
