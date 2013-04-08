@@ -1,0 +1,57 @@
+[[+preview]]
+<span class="quip-success" id="quip-success-[[+idprefix]]">[[+successMsg]]</span>
+
+<form class="custom" id="quip-add-comment-[[+idprefix]]" action="[[+url]]#quip-comment-preview-box-[[+idprefix]]" method="post">
+    <div class="quip-comment quip-add-comment">
+        <input type="hidden" name="nospam" value="" />
+        <input type="hidden" name="thread" value="[[+thread]]" />
+        <input type="hidden" name="parent" value="[[+parent]]" />
+        <input type="hidden" name="auth_nonce" value="[[+auth_nonce]]" />
+        <input type="hidden" name="preview_mode" value="[[+preview_mode]]" />
+        <div class="row">
+            <div class="large-4 columns">
+                <label for="quip-comment-name-[[+idprefix]]">[[%quip.name? &namespace=`quip` &topic=`default`]]:</label>
+                <input type="text" name="name" id="quip-comment-name-[[+idprefix]]" value="[[+name]]" />
+                <span class="quip-error">[[+error.name]]</span>
+            </div>
+            <div class="large-4 columns">
+                <label for="quip-comment-email-[[+idprefix]]">[[%quip.email]]:</label>
+                <input type="text" name="email" id="quip-comment-email-[[+idprefix]]" value="[[+email]]" />
+                <span class="quip-error">[[+error.email]]</span>
+            </div>
+            <div class="large-4 columns">
+                <label for="quip-comment-website-[[+idprefix]]">[[%quip.website]]:</label>
+                <input type="text" name="website" id="quip-comment-website-[[+idprefix]]" value="[[+website]]" />
+                <span class="quip-error">[[+error.website]]</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns recaptcha">
+                [[+quip.recaptcha_html]]
+                <span class="quip-error">[[+error.recaptcha]]</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <p><span class="quip-allowed-tags">[[%quip.allowed_tags? &tags=`[[++quip.allowed_tags:htmlent]]`]]</span>[[%quip.comment_add_new]]
+                    <span class="quip-error">[[+error.comment]]</span></p>
+                    <textarea name="comment" id="quip-comment-box-[[+idprefix]]">[[+comment]]</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+                [[+unsubscribe:default=`
+                <label for="quip-comment-notify-[[+idprefix]]">
+                    <input type="checkbox" style="display: none;" value="1" name="notify" id="quip-comment-notify-[[+idprefix]]" [[+notifyChecked]] />
+                    <span class="custom checkbox"></span>[[%quip.notify_me]]:
+                </label>
+                <span class="quip-error">[[+error.notify]]</span>
+                `]]
+            </div>
+            <div class="large-6 columns">
+                <button type="submit" name="[[+preview_action]]" value="1">[[%quip.preview]]</button>
+                [[+can_post:is=`1`:then=`<button type="submit" name="[[+post_action]]" value="1">[[%quip.post]]</button>`]]
+            </div>
+        </div>   
+    </div>
+</form>

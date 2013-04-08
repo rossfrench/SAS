@@ -233,7 +233,9 @@ nav {
 #content {
 	h2 {
 		color: $accent-colour;
-		
+	}
+	form h2 {
+		color: $head-colour;
 	}
 	a { color: $accent-colour;
 		}
@@ -245,67 +247,68 @@ nav {
 	}
 	#orbit-wrap {
 		border: 10px solid #fff;
-	}
-	.orbit-container .orbit-next>span {
-		margin-left: -5px;
-	}
-	.orbit-container .orbit-prev>span {
-		margin-left: 3px;
-	}
-	.orbit-container .orbit-prev, .orbit-container .orbit-next {
-		@include border-radius(30px, 30px);
-	}
-	.orbit-container .orbit-prev, .orbit-container .orbit-next {
-		width: 60px;
-	}
-	.orbit-container .orbit-prev {
-		left: 15px;
-	}
-	.orbit-container .orbit-next {
-		right: 15px;
-	}
-	.orbit-container .orbit-timer {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		height: 8px;
-		width: 100%;
-	}
-	.orbit-container .orbit-timer.paused>span, .orbit-container .orbit-timer>span {
-		top: 45px;
-		right: 15px;
-		height: 14px;
-		width: 14px;
-	}
 	
-	.orbit-bullets {
-		margin: 0 auto 30px auto;
-		overflow: hidden;
-		position: absolute;
-		top: 15px;
-		right:30px;
+		.orbit-container .orbit-next>span {
+			margin-left: -5px;
+		}
+		.orbit-container .orbit-prev>span {
+			margin-left: 3px;
+		}
+		.orbit-container .orbit-prev, .orbit-container .orbit-next {
+			@include border-radius(30px, 30px);
+		}
+		.orbit-container .orbit-prev, .orbit-container .orbit-next {
+			width: 60px;
+		}
+		.orbit-container .orbit-prev {
+			left: 15px;
+		}
+		.orbit-container .orbit-next {
+			right: 15px;
+		}
+		.orbit-container .orbit-timer {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 8px;
+			width: 100%;
+		}
+		.orbit-container .orbit-timer.paused>span, .orbit-container .orbit-timer>span {
+			top: 45px;
+			right: 15px;
+			height: 14px;
+			width: 14px;
+		}
+		
+		.orbit-bullets {
+			margin: 0 auto 30px auto;
+			overflow: hidden;
+			position: absolute;
+			top: 15px;
+			right:30px;
 
-	}
-	.orbit-bullets li {
-		width: 14px;
-		height: 14px;
-		background: #000;
-		border: solid 0px #000;
-		-webkit-border-radius: 0px;
-		border-radius: 0px;
-	}
-	.orbit-bullets li.active {
-		background: #fff;
-	}
-	.orbit-container .orbit-slide-number {
-		font-size: 14px;
-		color: #fff;
+		}
+		.orbit-bullets li {
+			width: 14px;
+			height: 14px;
+			background: #000;
+			border: solid 0px #000;
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+		}
+		.orbit-bullets li.active {
+			background: #fff;
+		}
+		.orbit-container .orbit-slide-number {
+			font-size: 14px;
+			color: #fff;
+		}
 	}
 	/* Pagination */
-.pageList {
-  display: block;
-  height: 1.5em;
-  margin-left: -0.3125em; }
+	.pageList {
+	  display: block;
+	  height: 1.5em;
+	  margin-left: -0.3125em; }
   .pageList li {
     display: block;
     float: left;
@@ -333,15 +336,22 @@ nav {
       .pageList li a.active:hover, .pageList li a.active:focus {
         background: #2ba6cb; }
 
-.paging {
-  text-align: center; }
-  .paging ul > li {
+	.paging {
+  	text-align: center; }
+  	.paging ul > li {
     float: none;
     display: inline-block; }
+    form .sas {padding-top:30px;}
 }
 hr {border: 1px dashed #d6d4cf !important; margin: 0 $pad/2 !important;}
 
-#sidebar {margin-top: $pad;}
+#sidebar {
+	margin-top: $pad;
+	form h2 {
+		color: $head-colour;
+	}
+	a {color: $main-colour;}
+}
 form {
 	padding: 0px $pad 0px $pad !important;
 	h2 {
@@ -373,7 +383,34 @@ form {
 	}
 }
 form, .sidebar-box {background: $accent-colour;}
-.sidebar-box {padding: 15px; margin: 0 0 30px 0; width: 100%;}
+form .sas {padding-top:30px;}
+.sidebar-box {
+	padding: 15px; 
+	margin: 0 0 30px 0;
+	width: 100%;
+	.orbit-container {
+		background: transparent;
+		.orbit-prev, .orbit-next, .orbit-slide-number, .orbit-timer {
+			display: none;
+		}
+	}
+	.orbit-bullets {
+		margin: 0 auto 30px auto;
+		overflow: hidden;
+		position: relative;
+		li {
+			width: 14px;
+			height: 14px;
+			background: #000;
+			border: solid 0px #000;
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+		}
+		li.active {
+			background: #fff;
+		}
+	}
+}
 
 table#opening-hours  {
 	background: $main-colour;
